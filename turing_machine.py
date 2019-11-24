@@ -80,11 +80,8 @@ def commit_action(cond_num, operator_pos, conditions, count):
     :param count: int() iteration counter
     :return:
     """
-    # print(tape)
+    # print(tape)  # uncomment to spectate whole process, better print it to text file
     cell_value = tape[operator_pos+1]
-    # print("condition   {}".format(cond_num))
-    # print("operator on   {}".format(tape[operator_pos+1]))
-    # print(tape)
     next_operator_pos = operator_pos + conditions[cond_num].commit(cell_value)
     tape[operator_pos+1] = conditions[cond_num].get_action(cell_value)[1]
     next_cond_num = conditions[cond_num].get_action(cell_value)[0]
@@ -98,7 +95,7 @@ def commit_action(cond_num, operator_pos, conditions, count):
 
 if __name__ == '__main__':
     stop_cond = 0
-    tape = [0 for _ in range(10**5 + 10000)]
+    tape = [0 for _ in range(10**5)]
     tape = fill_tape(tape)
     start = tape.index('*')
 
@@ -140,4 +137,4 @@ if __name__ == '__main__':
     c = Counter(tape)
     print('res == {}'.format(c[1]-1))
     print(tape)  #
-    print("Number of iterations was {}".format(res[4]))
+    print("Number of iterations was {}".format(res[3]))
