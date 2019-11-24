@@ -12,7 +12,9 @@ each action is defined next way:
 p in conditions means unfilled field and program acts normal with it
 
 As an example:
+
 p p p*p p p    0cond
+
 1 0 R*0 0 S    1cond
 
 lets say 0 is our stop condition
