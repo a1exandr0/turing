@@ -4,6 +4,7 @@ conditions.txt have all the conditions(each line is condition) for different cel
 
 CURRENT PROBLEM is unary multiplication, as an example "0 0 1 1 1 0 1 1 1 1 0" means 2*4 
 and should return "1 1 1 1 1 1 1 1 1"
+
 basically 1 means 0, 1 1 means 1, 1 1 1 means 2 and so on
 
 Each tape element must be separated by space from other elements
