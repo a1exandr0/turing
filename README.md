@@ -2,6 +2,9 @@
 tape.txt is initial condition of machine tape.
 conditions.txt have all the conditions(each line is condition) for different cell values(before and after * sign in conditions.txt)
 
+CURRENT PROBLEM is unary multiplication, as an example "0 0 1 1 1 0 1 1 1 1 0" means 2*4 
+and should return "1 1 1 1 1 1 1 1 1"
+
 Each tape element must be separated by space from other elements
 
 each action is defined next way:
@@ -13,14 +16,12 @@ p in conditions means unfilled field and program acts normal with it
 
 As an example:
 
-p p p*p p p                 0cond
+p p p*p p p
 
-1 0 R*0 0 S                 1cond
+1 0 R*0 0 S
 
-lets say 0 is our stop condition
+Lets say 0 is our stop condition, and 1 is start condition
 
-and 1 is start condition
+That means that when machine is in condition 1 and it has cell with value 0 it sets 1 as next condition puts 0 as cell value and goes right.
 
-that means that when machine is in condition 1 and it has cell with value 0 it sets 1 as next condition puts 0 as cell value and goes right.
-
-And when cell value is 1 it puts 0 as cell value sets 0 as next condition and stays on exact cell
+And when cell value is 1 it puts 0 as cell value sets 0 as next condition and stays on that cell.
