@@ -16,6 +16,9 @@ p p p*p p p    0cond
 1 0 R*0 0 S    1cond
 
 lets say 0 is our stop condition
+
 and 1 is start condition
+
 that means that when machine is in condition 1 and it has cell with value 0 it sets 1 as next condition puts 0 as cell value and goes right.
+
 And when cell value is 1 it puts 0 as cell value sets 0 as next condition and stays on exact cell
